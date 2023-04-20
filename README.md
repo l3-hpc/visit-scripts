@@ -10,7 +10,7 @@ Commands to cut and paste, starts with good default parameters for the file:
 - start_fvcom_lm.py: FVCOM Lake Michigan Data.  Expected outputs are shown in [LM](LM.md). 
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 
-If you have a different dataset, you'll want to change the default parameters.  Start by making a copy of a start script. It is mandatory that you set `var` to data that is actually in your dataset.  Then, as a starting point, I recommend setting `clim` = 1, and `scale` = 1.  **The data must be 3D.**  Also, if your mesh is called something different from the norm for FVCOM or SCHISM, that will need to be modified in setup_visit.py.  (In that case, let me know, so I can improve that script.  Ideally that script would be universal for 3D data.)
+Have a different dataset?  Scroll to the bottom for a Note. 
 
 ## Instructions for running
 
@@ -72,6 +72,21 @@ create_pseudocolor_3Dplot(setvars)
 - For SCHISM, the plugin needs to be installed.  For Windows, [download them from the VIMS website](http://ccrm.vims.edu/w/index.php/Visualization_with_VisIT). For Linux or Mac, follow my instructions on a fork of the [schism_visit_plugin](https://github.com/lisalenorelowe/schism_visit_plugin).
 - For SCHISM, the starting date is hard coded to November 11, 2019.  I'll change it when I figure out how to pull that metadata from VisIt.  If you want to change it, it is in setup_visit.py.
 - This is a work in progress, and there is little to no error checking so far. Open a GitHub Issue if you have questions, comments, concerns.  So far, my most common error is forgetting to put a comma after the variable in setvars when I change something.  Using wrong types (adding decimal to integer or mixing strings/bools/numbers) will also cause problems.
+
+## Different dataset?
+
+First: **The data must be 3D.**  
+
+For SCHISM and FVCOM:
+- Start by making a copy of a start_fvcom or start_schism file, rename it.
+- You'll want to change the default parameters.  
+-   Start by making a copy of a start_fvcom or start_schism file, rename it. 
+-   It is mandatory that you set `var` to data that is actually in your dataset.  
+-   Then, as a starting point, I recommend setting `clim` = 1, and `scale` = 1.
+
+For **not** SCHISM or FVCOM
+- create_pseudocolor_3Dplot will probably work, and probably create_psudocolor_2Dslice.
+- Transects use the 3D mesh coordinate, the name of your mesh will be different. That would need to be modified in setup_visit.py.  Or comment out the mesh parts.  (In that case, let me know, so I can improve that script.  Ideally that script would be universal for common 3D data.)
 
 
 **These instructions have only been tested on my Mac Studio with M1 chip for SCHISM MB and FVCOM LM.**
