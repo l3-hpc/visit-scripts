@@ -47,13 +47,12 @@ setvars = {
 #Are you using SCHISM?, True or False
 "schism" : False 
 }
-##---END COPY----------------##
 
-
-##---Cut and paste these one at a time------##
 #Open the file
 open_file(setvars)
+##---END COPY----------------##
 
+##---Cut and paste these one at a time------##
 #3D plot
 create_pseudocolor_3Dplot(setvars)
 
