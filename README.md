@@ -9,6 +9,8 @@ Scripts that define macros:
 Commands to cut and paste, starts with good default parameters for the file:
 - start_fvcom_lm.py: FVCOM Lake Michigan Data 
 - start_schism_mb.py: SCHISM Mobile Bay Data
+- start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
+
 
 If you have a different dataset, you'll want to change the default parameters.  Start by making a copy of a start script. It is mandatory that you set `var` to data that is actually in your dataset.  Then, as a starting point, I recommend setting `clim` = 1, and `scale` = 1.  **The data must be 3D.**  Also, if your mesh is called something different from the norm for FVCOM or SCHISM, that will need to be modified in setup_visit.py.  (In that case, let me know, so I can improve that script.  Ideally that script would be universal for 3D data.)
 
