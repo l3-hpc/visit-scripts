@@ -14,6 +14,7 @@ Creates a 3D plot
 To use a different percent, just change "percent" 
 ```
 setvars["percent"]= 20
+create_pseudocolor_2Dslice(setvars) 
 ```
 ![](imgs/2D20MB.png)
 
