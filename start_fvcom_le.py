@@ -10,7 +10,7 @@
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-for-fvcom"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/MacbookProArchiveMay2022/ORD/CURRENT_TEST/output.0/mi_0006.nc"
+FILE_NAME = "/Users/lllowe/A-ORD/leem_0001.nc"
 ##--MODIFY
 
 ##----BEGIN COPY---------------------
@@ -30,8 +30,8 @@ setvars = {
 #clim=0 means use default min/max for colormap
 "clim" : 1,
 #If clim=1, choose the min/max for colormap
-"cmin" : 0.002,
-"cmax" : 0.008,
+"cmin" : 0,
+"cmax" : 0.1,
 #The colormap
 "cmap" : "turbo",
 #Scale Z by
@@ -39,11 +39,11 @@ setvars = {
 #Percent of grid to choose Y slice
 "percent" : 35,
 #Origin point of transect
-"from_x" : 560998.31,
-"from_y" : 4767358.50,
+"from_x" : 320998.31,
+"from_y" : 4597358.50,
 #Destination point of transect
-"to_x" : 539195.69,
-"to_y" : 4765827.50,
+"to_x" : 380195.69,
+"to_y" : 4645827.50,
 #Are you using SCHISM?, True or False
 "schism" : False 
 }
@@ -55,6 +55,9 @@ open_file(setvars)
 ##---Cut and paste these one at a time------##
 #3D plot
 create_pseudocolor_3Dplot(setvars)
+
+#Change the timeslider or else it will be boring!
+
 
 #2D at constant Y (choose Y as percent)
 create_pseudocolor_2Dslice(setvars)

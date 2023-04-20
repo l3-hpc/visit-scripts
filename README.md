@@ -8,6 +8,7 @@ Scripts that define macros:
 
 Commands to cut and paste, starts with good default parameters for the file:
 - start_fvcom_lm.py: FVCOM Lake Michigan Data.  Expected outputs are shown in [LM](LM.md). 
+- start_fvcom_le.py: FVCOM Lake Erie Data.
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
 
