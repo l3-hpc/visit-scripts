@@ -12,6 +12,7 @@ Creates a 3D plot
 To use a different percent, just change "percent" 
 ```
 setvars["percent"]= 20
+create_pseudocolor_2Dslice(setvars) 
 ```
 ![](2D20LM.png)
 
@@ -24,6 +25,7 @@ setvars["percent"]= 20
 ![](3DtransectLM.png)
 
 After Rotating:
+
 ![](rotateLM.png)
 
 
