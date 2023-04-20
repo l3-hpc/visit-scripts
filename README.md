@@ -7,27 +7,49 @@ Scripts that define macros:
 - setup_visit.py
 
 Commands to cut and paste, starts with good default parameters for the file:
-- start_fvcom_lm.py: FVCOM Lake Michigan Data 
-- start_schism_mb.py: SCHISM Mobile Bay Data
+- start_fvcom_lm.py: FVCOM Lake Michigan Data.  Expected outputs are shown in [LM](LM.md). 
+- start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 
 If you have a different dataset, you'll want to change the default parameters.  Start by making a copy of a start script. It is mandatory that you set `var` to data that is actually in your dataset.  Then, as a starting point, I recommend setting `clim` = 1, and `scale` = 1.  **The data must be 3D.**  Also, if your mesh is called something different from the norm for FVCOM or SCHISM, that will need to be modified in setup_visit.py.  (In that case, let me know, so I can improve that script.  Ideally that script would be universal for 3D data.)
 
 ## Instructions for running
 
-Before beginning, modify the start_XXX.py file for the location of these scripts and the data file.  
+### Get the scripts
+From the terminal or Windows git bash, do
+```
+git clone https://github.com/l3-hpc/visit-scripts.git
+cd visit-scripts
+```
 
-For example:
+Or if you are avoiding the command line, click the green button at the top of the page of [this repo](https://github.com/l3-hpc/visit-scripts), click the green Code button and Download ZIP.  Find the zip file, called visit-scripts-main.zip, unzip, and click on the folder visit-scripts-main.
+
+### Modify the paths
+Before beginning, modify the start_XXX.py file for the location of these scripts and the data file.
+
+For example, on Linux or Mac
 ```
 ##-- MODIFY -------------------
 ##--Set path to scripts----
-SCRIPT_PATH = "/Users/lllowe/visit-scripts"
+SCRIPT_PATH = "/Users/name/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A-SCHISM/salinity_50.nc"
+FILE_NAME = "/Users/name/SCHISM/salinity_50.nc"
 ##-- END MODIFY ---------------
 ``` 
 
+On Windows, it will look more like this:
+```
+##-- MODIFY -------------------
+##--Set path to scripts----
+SCRIPT_PATH = "C:\\Users\\name\\visit-scripts\\"
+#Put the full path to the file
+FILE_NAME = "C:\\Users\\name\\path-to-files\\salinity_50.nc"
+##-- END MODIFY ---------------
+``` 
+(I didn't test on Windows.)
+
 Keep the script open, as you will cut and paste from it.
 
+### Using VisIt
 Open VisIt.
 
 Launch the command line interface.  In the top VisIt nav bar:
