@@ -23,11 +23,8 @@ setvars["percent"]= 20
 2D transect shown within the 3D grid
 ![](3DtransectLM.png)
 
-For large grids, it takes forever to rotate when opacity is on. First, "Hide" the Mesh variable. Rotate it until you find a good angle for the transect, then "Show".
+After Rotating:
+![](rotateLM.png)
 
-After Rotating and Hiding:
-![](hideLM.png)
 
-Then Show:
-![](showLM.png)
 
