@@ -97,7 +97,7 @@ def create_pseudocolor_3Dplot(setvars):
     SetOperatorOptions(TransformAtts, 0, 1)
 
     #If using SCHISM, get rid of junk values
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         AddOperator("Threshold", 1)
         ThresholdAtts = ThresholdAttributes()
         ThresholdAtts.outputMeshType = 0
@@ -110,6 +110,23 @@ def create_pseudocolor_3Dplot(setvars):
         ThresholdAtts.defaultVarIsScalar = 1
         ThresholdAtts.boundsRange = ("-1e+37:1e+37")
         SetOperatorOptions(ThresholdAtts, 1, 1)
+
+    #If using efdc, get rid of junk values
+    if(setvars["model"]=="efdc"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (0)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("0:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+
+
 
     #Set plot attributes
     PseudocolorAtts = PseudocolorAttributes()
@@ -158,7 +175,7 @@ def create_pseudocolor_2Dslice(setvars):
     SetOperatorOptions(TransformAtts, 0, 1)
 
     #If using SCHISM, get rid of junk values
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         AddOperator("Threshold", 1)
         ThresholdAtts = ThresholdAttributes()
         ThresholdAtts.outputMeshType = 0
@@ -170,6 +187,21 @@ def create_pseudocolor_2Dslice(setvars):
         ThresholdAtts.defaultVarName = setvars["var"]
         ThresholdAtts.defaultVarIsScalar = 1
         ThresholdAtts.boundsRange = ("-1e+37:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+
+    #If using efdc, get rid of junk values
+    if(setvars["model"]=="efdc"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (0)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("0:1e+37")
         SetOperatorOptions(ThresholdAtts, 1, 1)
 
     #Full frame
@@ -243,7 +275,7 @@ def create_pseudocolor_2Dtransect(setvars):
     SetOperatorOptions(TransformAtts, 0, 1)
 
     #If using SCHISM, get rid of junk values
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         AddOperator("Threshold", 1)
         ThresholdAtts = ThresholdAttributes()
         ThresholdAtts.outputMeshType = 0
@@ -255,6 +287,21 @@ def create_pseudocolor_2Dtransect(setvars):
         ThresholdAtts.defaultVarName = setvars["var"]
         ThresholdAtts.defaultVarIsScalar = 1
         ThresholdAtts.boundsRange = ("-1e+37:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+
+    #If using efdc, get rid of junk values
+    if(setvars["model"]=="efdc"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (0)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("0:1e+37")
         SetOperatorOptions(ThresholdAtts, 1, 1)
 
     #Full frame
@@ -295,7 +342,7 @@ def create_pseudocolor_2Dtransect(setvars):
     SliceAtts.originZoneDomain = 0
     SliceAtts.originNodeDomain = 0
     SliceAtts.meshName = "Bathymetry_Mesh"
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         SliceAtts.meshName = "3D_Mesh"
     SliceAtts.theta = 0
     SliceAtts.phi = 0
@@ -373,35 +420,34 @@ def transect_against_3D(setvars):
     SetOperatorOptions(TransformAtts, 0, 1)
 
     #Add Mesh Plot with the same attributes
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         AddPlot("Mesh", "3D_Mesh", 1, 1)
-    else:
+    elif (setvars["model"]=="fvcom"):
         AddPlot("Mesh", "SigmaLayer_Mesh", 1, 1)        
 
-
     #Change the color and opacity of mesh
-    SetActivePlots(1)
-    MeshAtts = MeshAttributes()
-    MeshAtts.legendFlag = 1
-    MeshAtts.lineWidth = 0
-    MeshAtts.meshColor = (128, 128, 128, 255)
-    MeshAtts.meshColorSource = MeshAtts.MeshCustom  # Foreground, MeshCustom, MeshRandom
-    MeshAtts.opaqueColorSource = MeshAtts.Background  # Background, OpaqueCustom, OpaqueRandom
-    MeshAtts.opaqueMode = MeshAtts.Auto  # Auto, On, Off
-    MeshAtts.pointSize = 0.05
-    MeshAtts.opaqueColor = (255, 255, 255, 255)
-    MeshAtts.smoothingLevel = MeshAtts.None  # None, Fast, High
-    MeshAtts.pointSizeVarEnabled = 0
-    MeshAtts.pointSizeVar = "Default"
-    MeshAtts.pointType = MeshAtts.Point  # Box, Axis, Icosahedron, Octahedron, Tetrahedron, SphereGeometry, Point, Sphere
-    MeshAtts.showInternal = 0
-    MeshAtts.pointSizePixels = 2
-    MeshAtts.opacity = 0.333333
-    SetPlotOptions(MeshAtts)
+    if(setvars["model"] != "efdc"):
+        SetActivePlots(1)
+        MeshAtts = MeshAttributes()
+        MeshAtts.legendFlag = 1
+        MeshAtts.lineWidth = 0
+        MeshAtts.meshColor = (128, 128, 128, 255)
+        MeshAtts.meshColorSource = MeshAtts.MeshCustom  # Foreground, MeshCustom, MeshRandom
+        MeshAtts.opaqueColorSource = MeshAtts.Background  # Background, OpaqueCustom, OpaqueRandom
+        MeshAtts.opaqueMode = MeshAtts.Auto  # Auto, On, Off
+        MeshAtts.pointSize = 0.05
+        MeshAtts.opaqueColor = (255, 255, 255, 255)
+        MeshAtts.smoothingLevel = MeshAtts.None  # None, Fast, High
+        MeshAtts.pointSizeVarEnabled = 0
+        MeshAtts.pointSizeVar = "Default"
+        MeshAtts.pointType = MeshAtts.Point  # Box, Axis, Icosahedron, Octahedron, Tetrahedron, SphereGeometry, Point, Sphere
+        MeshAtts.showInternal = 0
+        MeshAtts.pointSizePixels = 2
+        MeshAtts.opacity = 0.333333
+        SetPlotOptions(MeshAtts)
 
     #If using SCHISM, get rid of junk values
-    if(setvars["schism"]):
-        SetActivePlots(0)
+    if(setvars["model"]=="schism"):
         AddOperator("Threshold", 1)
         ThresholdAtts = ThresholdAttributes()
         ThresholdAtts.outputMeshType = 0
@@ -411,8 +457,23 @@ def transect_against_3D(setvars):
         ThresholdAtts.lowerBounds = (-1e+37)
         ThresholdAtts.upperBounds = (1e+37)
         ThresholdAtts.defaultVarName = setvars["var"]
-        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.defaultVarIsScalar = 1 
         ThresholdAtts.boundsRange = ("-1e+37:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+    
+    #If using efdc, get rid of junk values
+    if(setvars["model"]=="efdc"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (0)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("0:1e+37")
         SetOperatorOptions(ThresholdAtts, 1, 1)
 
     #Select Box, hopefully to just the Active Plots
@@ -449,7 +510,7 @@ def transect_against_3D(setvars):
     SliceAtts.originZoneDomain = 0
     SliceAtts.originNodeDomain = 0
     SliceAtts.meshName = "Bathymetry_Mesh"
-    if(setvars["schism"]):
+    if(setvars["model"] == "schism"):
         SliceAtts.meshName = "3D_Mesh"
     SliceAtts.theta = 0
     SliceAtts.phi = 0
@@ -466,14 +527,18 @@ def open_file(setvars):
 #    t_start = calendar.timegm(datetime.datetime(1858, 11, 17, 0, 0, 0).timetuple())
 #else:
 #    t_start = 1572566400
-    if(setvars["schism"]):
+    if(setvars["model"]=="schism"):
         OpenDatabase(setvars["db"],0,"SCHISM")
         MJD = False 
         t_start = 1572566400
-    else:
+    elif(setvars["model"]=="fvcom"):
         OpenDatabase(setvars["db"],0,"")
         MJD = True
         t_start = calendar.timegm(datetime.datetime(1858, 11, 17, 0, 0, 0).timetuple())
+    else:
+        OpenDatabase(setvars["db"],0,"")
+        MJD = False 
+        t_start = calendar.timegm(datetime.datetime(1970, 1, 1, 0, 0, 0).timetuple())
 
 
 #RegisterCallback executes a function when something happens in the GUI 

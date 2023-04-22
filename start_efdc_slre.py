@@ -1,20 +1,19 @@
-#start_schism_mb.py
+#start_fvcom_lm.py
 #Instructions:
 # - First, modify "MODIFY" section with the proper paths
 # - Open VisIt, select Controls:Launch CLI
 # - A terminal should open with >>>
 # - Copy and paste everything between BEGIN COPY and END COPY
-# - Copy and paste plot commands one by one
+# - Copy and paste commands one by one
 
-##---BEGIN COPY---------------
-
-##-- MODIFY -------------------
+##--MODIFY-------------------
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A-SCHISM/salinity_50.nc"
-##-- END MODIFY ---------------
+FILE_NAME = "/Users/lllowe/A/slre.32.nc"
+##--MODIFY
 
+##----BEGIN COPY---------------------
 #So it can find setup_visit.py
 import sys 
 sys.path.append(SCRIPT_PATH)
@@ -25,38 +24,40 @@ from setup_visit import *
 ## Plot attributes
 setvars = {
 #The filename
-"db" : FILE_NAME,
+"db" : FILE_NAME, 
 #The variable to be plotted
-"var" : "salinity",
+"var" : "PO4",
 #clim=0 means use default min/max for colormap
-"clim" : 0,
+"clim" : 1,
 #If clim=1, choose the min/max for colormap
 "cmin" : 0,
-"cmax" : 35,
+"cmax" : 4,
 #The colormap
 "cmap" : "turbo",
 #Scale Z by
-"scale" : 0.004,
+"scale" : .04,
 #Percent of grid to choose Y slice
 "percent" : 35,
 #Origin point of transect
-"from_x" : -88.50,
-"from_y" : 30.10,
+"from_x" : -86.29696,
+"from_y" : 46.64568,
 #Destination point of transect
-"to_x" : -87.70,
-"to_y" : 31.1,
+"to_x" : -85.88377,
+"to_y" : 46.81679,
 #schism, fvcom, or efdc
-"model" : "schism"
+"model" : "efdc" 
 }
 
 #Open the file
 open_file(setvars)
 ##---END COPY----------------##
 
-
 ##---Cut and paste these one at a time------##
 #3D plot
 create_pseudocolor_3Dplot(setvars)
+
+#Change the timeslider or else it will be boring!
+
 
 #2D at constant Y (choose Y as percent)
 create_pseudocolor_2Dslice(setvars)
@@ -71,4 +72,5 @@ create_pseudocolor_2Dtransect(setvars)
 #2D transect shown within the 3D grid
 #For large grids, it takes forever to rotate when opacity is on
 #"Hide" the Mesh variable, Rotate it until you find the transect, then "Show"
+#EFDC doesn't have mesh right now
 transect_against_3D(setvars)

@@ -14,7 +14,7 @@ FILE_NAME = "/Users/lllowe/A-ORD/leem_0001.nc"
 ##--MODIFY
 
 ##----BEGIN COPY---------------------
-#So it can find simple_schism.py
+#So it can find setup_visit.py
 import sys 
 sys.path.append(SCRIPT_PATH)
 
@@ -44,8 +44,8 @@ setvars = {
 #Destination point of transect
 "to_x" : 380195.69,
 "to_y" : 4645827.50,
-#Are you using SCHISM?, True or False
-"schism" : False 
+#schism, fvcom, or efdc
+"model" : "fvcom"
 }
 
 #Open the file

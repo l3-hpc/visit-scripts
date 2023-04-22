@@ -15,7 +15,7 @@ SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 FILE_NAME = "/Users/lllowe/A-CGEM/outputs-srand/GEN_4_1.nc"
 ##-- END MODIFY ---------------
 
-#So it can find simple_schism.py
+#So it can find setup_visit.py
 import sys 
 sys.path.append(SCRIPT_PATH)
 
@@ -45,8 +45,8 @@ setvars = {
 #Destination point of transect
 "to_x" : 600,
 "to_y" : 600,
-#Are you using SCHISM?, True or False
-"schism" : True 
+#schism, fvcom, or efdc
+"model" : "schism"
 }
 
 #Open the file
