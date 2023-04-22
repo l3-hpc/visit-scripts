@@ -1,4 +1,4 @@
-# Images from FVCOM Lake Michigan
+# Images from SCHISM Mobile Bay
 
 ## create_pseudocolor_3Dplot(setvars)
 Creates a 3D plot
