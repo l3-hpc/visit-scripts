@@ -11,7 +11,7 @@ Commands to cut and paste, starts with good default parameters for the file:
 - start_fvcom_le.py: FVCOM Lake Erie Data.
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
-- start_efdc_slre.py: EFDC for SLRE
+- start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
 
 Have a different dataset?  Scroll to the bottom for a Note. 
 
