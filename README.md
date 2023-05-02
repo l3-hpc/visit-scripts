@@ -12,8 +12,15 @@ Commands to cut and paste, starts with good default parameters for the file:
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
 - start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
+*Have a different dataset?  Scroll to the bottom for a Note.*
 
-Have a different dataset?  Scroll to the bottom for a Note. 
+notes directory
+- dates_reference has starting days of months
+- ffmpeg.txt has ffmpeg command
+- vars_reference.txt: how to define comparison variables, e.g., TP as a function of other variables
+
+sample-movie-scripts directory
+- These are specific to my files, but can be used in developing other scripts.  I don't have a generic movie script yet.
 
 ## Instructions for running
 
