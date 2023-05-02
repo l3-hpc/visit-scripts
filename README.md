@@ -11,6 +11,7 @@ Commands to cut and paste, starts with good default parameters for the file:
 - start_fvcom_le.py: FVCOM Lake Erie Data.
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
+- start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
 
 Have a different dataset?  Scroll to the bottom for a Note. 
 
@@ -91,4 +92,4 @@ For **not** SCHISM or FVCOM
 - Transects use the 3D mesh coordinate, the name of your mesh will be different. That would need to be modified in setup_visit.py.  Or comment out the mesh parts.  (In that case, let me know, so I can improve that script.  Ideally that script would be universal for common 3D data.)
 
 
-**These instructions have only been tested on my Mac Studio with M1 chip for SCHISM MB and FVCOM LM.**
+**These instructions have only been tested on my Mac Studio with M1 chip for the 'start_' files provided.**
