@@ -1,4 +1,4 @@
-#start_fvcom_lm.py
+#start_fvcom_le.py
 #Instructions:
 # - First, modify "MODIFY" section with the proper paths
 # - Open VisIt, select Controls:Launch CLI
@@ -8,11 +8,9 @@
 
 ##--MODIFY-------------------
 ##--Set path to scripts----
-SCRIPT_PATH = "/Users/lllowe/visit-for-fvcom"
+SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A-ORD/leem_0001.nc"
-##--MODIFY
-
+FILE_NAME = "/Users/lllowe/LakeErie/DATA/leem_2days.nc"
 ##----BEGIN COPY---------------------
 #So it can find setup_visit.py
 import sys 
@@ -51,6 +49,9 @@ setvars = {
 #Open the file
 open_file(setvars)
 ##---END COPY----------------##
+
+##Compare variables
+#DefineScalarExpression("TP_tot", "RPOP + LPOP + RDOP + LDOP + PO4T + LPIP + RPIP + (ZOO1 + ZOO2 + ZOO3)/50.0")
 
 ##---Cut and paste these one at a time------##
 #3D plot

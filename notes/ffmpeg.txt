@@ -1,0 +1,17 @@
+#Install ffmpeg with conda then
+#conda activate ffmpeg 
+#or 
+#module load ffmpeg
+
+#export is for bash
+#for (t)cshrc, use setenv, e.g.,
+#setenv dirname [directory name where the files are]
+export dirname=[directory name where the files are]
+export filename=[file name for images and movie name]
+export suffix=[suffix: png, ppm, etc.]
+export nframes=[total number of images to add to movie]
+export start=[starting frame number]
+export framerate=[frames per second, 15 is usually good for the eye]
+
+#ffmpeg command after setting the above
+ffmpeg -r $framerate -f image2 -s 1920x1080 -start_number $start -i $dirname/$filename%04d.$suffix -vframes $nframes -vcodec libx264 -crf 25  -pix_fmt yuv420p ./$filename.mp4

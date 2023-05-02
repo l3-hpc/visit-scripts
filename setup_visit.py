@@ -127,7 +127,6 @@ def create_pseudocolor_3Dplot(setvars):
         SetOperatorOptions(ThresholdAtts, 1, 1)
 
 
-
     #Set plot attributes
     PseudocolorAtts = PseudocolorAttributes()
     PseudocolorAtts.minFlag = setvars["clim"] 
@@ -520,6 +519,81 @@ def transect_against_3D(setvars):
     #Draw the plot
     DrawPlots()
 
+
+
+def create_pseudocolor_projection(setvars):
+    DeleteAllPlots()
+
+    ##Just for 2D
+    #Axes are on
+    AnnotationAtts = AnnotationAttributes()
+    #Don't print out username and name of database
+    AnnotationAtts.userInfoFlag = 0
+    AnnotationAtts.databaseInfoFlag = 0
+    #get rid of x-y-x axis thing in the bottom left
+    AnnotationAtts.axes3D.triadFlag = 0
+    #White background
+    AnnotationAtts.backgroundColor = (255, 255, 255, 255)
+    #Black Foreground
+    AnnotationAtts.foregroundColor = (0, 0, 0, 255)
+    #Turn on 2D axes
+    AnnotationAtts.axes2D.visible = 1
+    ##x-axis labeling is fine for slices 
+    AnnotationAtts.axes2D.xAxis.title.visible = 1
+    AnnotationAtts.axes2D.xAxis.label.visible = 1
+    AnnotationAtts.axes2D.yAxis.title.visible = 1
+    SetAnnotationAttributes(AnnotationAtts)
+
+    #Create the plot
+    AddPlot("Pseudocolor", setvars["var"], 1, 1)
+    SetActivePlots(0)
+
+    #Project to 2D
+    AddOperator("Project",1)
+
+    #If using SCHISM, get rid of junk values
+    if(setvars["model"]=="schism"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (-1e+37)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("-1e+37:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+
+    #If using efdc, get rid of junk values
+    if(setvars["model"]=="efdc"):
+        AddOperator("Threshold", 1)
+        ThresholdAtts = ThresholdAttributes()
+        ThresholdAtts.outputMeshType = 0
+        ThresholdAtts.boundsInputType = 0
+        ThresholdAtts.listedVarNames = (setvars["var"])
+        ThresholdAtts.zonePortions = (0)
+        ThresholdAtts.lowerBounds = (0)
+        ThresholdAtts.upperBounds = (1e+37)
+        ThresholdAtts.defaultVarName = setvars["var"]
+        ThresholdAtts.defaultVarIsScalar = 1
+        ThresholdAtts.boundsRange = ("0:1e+37")
+        SetOperatorOptions(ThresholdAtts, 1, 1)
+
+    #Set plot attributes
+    PseudocolorAtts = PseudocolorAttributes()
+    PseudocolorAtts.minFlag = setvars["clim"]
+    PseudocolorAtts.maxFlag = setvars["clim"]
+    PseudocolorAtts.colorTableName = setvars["cmap"]
+    PseudocolorAtts.min = setvars["cmin"]
+    PseudocolorAtts.max = setvars["cmax"]
+    SetPlotOptions(PseudocolorAtts)
+
+    #Draw the plot
+    DrawPlots()
+
+
 def open_file(setvars):
     global MJD
     global t_start
@@ -552,6 +626,7 @@ RegisterMacro("create_pseudocolor_3Dplot",create_pseudocolor_3Dplot)
 RegisterMacro("create_create_pseudocolor_2Dslice",create_pseudocolor_2Dslice)
 RegisterMacro("create_pseudocolor_2Dtransect",create_pseudocolor_2Dtransect)
 RegisterMacro("transect_against_3D",transect_against_3D)
+RegisterMacro("create_pseudocolor_projection",create_pseudocolor_projection)
 RegisterMacro("open_file",open_file)
 
 #To edit with Vim, use this

@@ -1,4 +1,4 @@
-#start_fvcom_lm.py
+#start_efdc_slre.py
 #Instructions:
 # - First, modify "MODIFY" section with the proper paths
 # - Open VisIt, select Controls:Launch CLI
@@ -10,8 +10,8 @@
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A/slre.32.nc"
-##--MODIFY
+FILE_NAME = "/Users/lllowe/EFDC-CGEM/DATA/slre-cgem.2hrs.nc"
+##--END MODIFY
 
 ##----BEGIN COPY---------------------
 #So it can find setup_visit.py
@@ -26,12 +26,12 @@ setvars = {
 #The filename
 "db" : FILE_NAME, 
 #The variable to be plotted
-"var" : "PO4",
+"var" : "Tr",
 #clim=0 means use default min/max for colormap
 "clim" : 1,
 #If clim=1, choose the min/max for colormap
 "cmin" : 0,
-"cmax" : 4,
+"cmax" : 2,
 #The colormap
 "cmap" : "turbo",
 #Scale Z by
@@ -58,6 +58,8 @@ create_pseudocolor_3Dplot(setvars)
 
 #Change the timeslider or else it will be boring!
 
+#2D projection
+create_pseudocolor_projection(setvars)
 
 #2D at constant Y (choose Y as percent)
 create_pseudocolor_2Dslice(setvars)

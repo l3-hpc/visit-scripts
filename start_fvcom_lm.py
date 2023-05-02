@@ -8,7 +8,7 @@
 
 ##--MODIFY-------------------
 ##--Set path to scripts----
-SCRIPT_PATH = "/Users/lllowe/visit-for-fvcom"
+SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
 FILE_NAME = "/Users/lllowe/MacbookProArchiveMay2022/ORD/CURRENT_TEST/output.0/mi_0006.nc"
 ##--MODIFY

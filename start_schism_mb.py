@@ -12,7 +12,7 @@
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A-SCHISM/salinity_50.nc"
+FILE_NAME = "/Users/lllowe/VisItForSCHISM/salinity_50.nc"
 ##-- END MODIFY ---------------
 
 #So it can find setup_visit.py

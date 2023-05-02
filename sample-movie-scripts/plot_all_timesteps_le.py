@@ -8,14 +8,14 @@ import sys
 #To calculate normal vector for defining transect
 import numpy as np
 
-##-- MODIFY -------------------
+##--MODIFY-------------------
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/A-CGEM/outputs-srand/GEN_4_1.nc"
+FILE_NAME = "/Users/lllowe/A-ORD/Baseline_2013_0001.nc"
 #Define where the images should be printed out
 #If the images exist already, they will be overwritten
-IMGS_DIR = "/Users/lllowe/A-CGEM/images/"
+IMGS_DIR = "/Users/lllowe/A-ORD/images/"
 ##-- END MODIFY ---------------
 
 #So it can find simple_schism.py
@@ -23,23 +23,19 @@ import sys
 sys.path.append(SCRIPT_PATH)
 
 from visit import *
-from setup_visit import *
-
-
-global t_start
-
+from setup_visit_base import *
 
 ## Plot attributes
 setvars = {
 #The filename
 "db" : FILE_NAME,
 #The variable to be plotted
-"var" : "GEN_4",
+"var" : "TP_tot",
 #clim=0 means use default min/max for colormap
-"clim" : 0,
+"clim" : 1,
 #If clim=1, choose the min/max for colormap
 "cmin" : 0,
-"cmax" : 35,
+"cmax" : 0.1,
 #The colormap
 "cmap" : "turbo",
 #Scale Z by
@@ -53,15 +49,28 @@ setvars = {
 "to_x" : 600,
 "to_y" : 600,
 #Are you using SCHISM?, True or False
-"schism" : True
+"model" : "fvcom" 
 }
+
+
+#Check that the file exists
+if not os.path.exists(setvars["db"]):
+    sys.exit("The file " + setvars["db"] + " does not exist.  Check definition of db in setvars. Exiting.")
+
+#Create a directory for images if one doesn't exist.
+#Note, existing files will be overwritten
+if not os.path.exists(IMGS_DIR):
+    os.makedirs(IMGS_DIR)
+
 
 #Open the file
 open_file(setvars)
-##---END COPY----------------##
 
-###-- All of the above was just defining the 'functions' -------------
-##    Below is the start of the loop that actually calls the functions
+
+DefineScalarExpression("TP_tot", "RPOP + LPOP + RDOP + LDOP + PO4T + LPIP + RPIP + (ZOO1 + ZOO2 + ZOO3)/50.0")
+
+
+## Define the attributes for saving images 
 SaveWindowAtts = SaveWindowAttributes()
 SaveWindowAtts.outputToCurrentDirectory = 0
 SaveWindowAtts.outputDirectory = IMGS_DIR 
@@ -78,19 +87,25 @@ SaveWindowAtts.family = 0
 SaveWindowAtts.format = SaveWindowAtts.PNG
 SetSaveWindowAttributes(SaveWindowAtts)
 
-skip_states=1    
+t_start = calendar.timegm(datetime.datetime(1970, 1, 1, 0, 0, 0).timetuple())
+
 m = GetMetaData(setvars["db"])
 totalstates = TimeSliderGetNStates()
-loopstates = int(totalstates/skip_states)
 istate = 0
+
 for state in range(totalstates):
     SetTimeSliderState(state)
-    FILE_TS = "_" + str(state) 
-    slider.visible=0
-    create_pseudocolor_2Dslice(setvars)
-    SaveWindowAtts.fileName = setvars["var"] + "_" + "slice_" + str(setvars["percent"]) + FILE_TS
+    FILE_TS = "_" + str(state).zfill(4)
+    slider.visible=1
+    tcur = m.times[state] + t_start
+    ts = datetime.datetime.utcfromtimestamp(tcur).strftime('%Y-%m-%d %H:%M:%S')
+    timestamp = "Time: " + ts + " GMT"
+    slider.text=timestamp
+    create_pseudocolor_projection(setvars)
+    SaveWindowAtts.fileName = setvars["var"] + FILE_TS
     SetSaveWindowAttributes(SaveWindowAtts)
     SaveWindow()
+    #ClearCacheForAllEngines()
 
 #Comment this out to leave VisIT CLI open after script is complete
 sys.exit()

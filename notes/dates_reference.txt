@@ -1,0 +1,14 @@
+Month, (days in month), (starting day number): starting file number for fvcom hourly output
+January (31), (0): 0000
+February (28), (31): 0744 
+March (31), (59): 1416
+April (30), (90): 2160
+May (31), (120): 2880
+June (30), (151): 3624
+July (31), (181): 4334
+August (31), (212): 5088
+September (30), (243): 5832
+October (31), (273): 6552
+November (30), (304): 7296
+December (31), (334): 8016
+End 365: 87600
