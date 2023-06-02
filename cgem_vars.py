@@ -206,7 +206,7 @@ Tr = {
 "cmap" : "turbo"
 }
 
-#Python dictionary for variables
+#Scripts calling this function will loop through the following:
 #cgem_vars = [A1,Qn1,Qp1,Z1,Z2,NO3,NH4,PO4,DIC,O2,OM1A,OM2A,OM1Z,OM2Z,CDOM,Si,OM1BC,OM2BC,Alk,Tr]
 #cgem_vars = [A1,O2]
 #cgem_vars = [Salt,Temp]
