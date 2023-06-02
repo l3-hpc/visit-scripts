@@ -535,6 +535,18 @@ def pseudocolor_projection(setvars):
     #Draw the plot
     DrawPlots()
 
+def open_file(setvars):
+    if(setvars["model"]=="schism"):
+        OpenDatabase(setvars["db"],0,"SCHISM")
+    elif(setvars["model"]=="fvcom"):
+        OpenDatabase(setvars["db"],0,"")
+    else:
+        OpenDatabase(setvars["db"],0,"")
+    
+def close_file(setvars): 
+    CloseDatabase(setvars["db"])
+
+
 #RegisterMacro executes a function when you type the name at the command line
 RegisterMacro("pseudocolor_2D",pseudocolor_2D)
 RegisterMacro("pseudocolor_3D",pseudocolor_3D)
@@ -542,6 +554,8 @@ RegisterMacro("pseudocolor_2Dslice",pseudocolor_2Dslice)
 RegisterMacro("pseudocolor_2Dtransect",pseudocolor_2Dtransect)
 RegisterMacro("transect_against_3D",transect_against_3D)
 RegisterMacro("pseudocolor_projection",pseudocolor_projection)
+RegisterMacro("open_file",open_file)
+RegisterMacro("close_file",close_file)
 
 #To edit with Vim, use this
 #:set tabstop=8 expandtab shiftwidth=4 softtabstop=4
