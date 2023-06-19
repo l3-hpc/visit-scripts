@@ -43,9 +43,9 @@ ls -lh mi_0013.nc
 
 ## Run example script for LM
 
-For instructions on using the 'start' scripts, see the [README](README.md).
+For full instructions on using the 'start' scripts, see the [README](README.md).
 
-For convienience, just copy and paste these, after modifying yourusername.  This should open a 3D plot.
+To test, for your convienience, just copy and paste these, after modifying yourusername.  This should open a 3D plot.
 ```
 SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
 FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
