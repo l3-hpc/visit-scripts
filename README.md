@@ -40,9 +40,9 @@ For example, on Linux or Mac
 ```
 ##-- MODIFY -------------------
 ##--Set path to scripts----
-SCRIPT_PATH = "/Users/name/visit-scripts"
+SCRIPT_PATH = "/Users/yourusername/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/name/SCHISM/salinity_50.nc"
+FILE_NAME = "/Users/yourusername/path-to-output-files/salinity_50.nc"
 ##-- END MODIFY ---------------
 ``` 
 
@@ -50,12 +50,11 @@ On Windows, it will look more like this:
 ```
 ##-- MODIFY -------------------
 ##--Set path to scripts----
-SCRIPT_PATH = "C:\\Users\\name\\visit-scripts\\"
+SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
 #Put the full path to the file
-FILE_NAME = "C:\\Users\\name\\path-to-files\\salinity_50.nc"
+FILE_NAME = "C:\\Users\\yourusername\\path-to-output-files\\salinity_50.nc"
 ##-- END MODIFY ---------------
 ``` 
-(I didn't test on Windows.)
 
 Keep the script open, as you will cut and paste from it.
 
