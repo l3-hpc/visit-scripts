@@ -72,7 +72,7 @@ A terminal should open with
 
 Copy everything from `##----After modifying paths, BEGIN COPY---------------------` to `##---END COPY----------------##`.  Paste it in to the terminal.  There is no error checking yet.  (Sorry.)
 
-Also, copy/paste to VisIt CLI doesn't work when using a VM.  Maybe you can fix the settings to make it work.  (If you do, let me know how.). Otherwise, you'll have to type.  It is not actually that much to type, if you ignore the comments.  See [Windows Instructions](Win10.md) to see the commands without comment lines and extra whitespace.
+Also, copy/paste to VisIt CLI doesn't work when using a VM.  Maybe you can fix the settings to make it work.  (If you do, let me know how.). Otherwise, you'll have to type.  It is not actually that much to type, if you ignore the comments.  See [Windows Instructions](Win10.md), **Run example script for LM**, to see the commands without comment lines and extra whitespace.
 
 Choose one of the plots.  Start with
 ```
