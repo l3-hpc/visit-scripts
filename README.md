@@ -20,7 +20,7 @@ notes directory
 - vars_reference.txt: how to define comparison variables, e.g., TP as a function of other variables
 
 sample-movie-scripts directory
-- [Instructions for running VisIt in batch mode to created images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
+- [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
 - Other scripts are likely specific to my own files and without documentation on modifying them.
 
 ## Instructions for running
