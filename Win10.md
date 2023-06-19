@@ -4,7 +4,7 @@
 
 Install MobaXterm: see these text instructions which include a link to a video tutorial. [Install MobaXterm](https://hpc.ncsu.edu/Documents/mobaxterm.php?ref=login)
 
-Follow the instructions or video to change the MobaXte perisistent home directory to `C:\Users\yourusername` (change yourusername to your actual username).
+Follow the instructions or video to change the MobaXterm perisistent home directory to `C:\Users\yourusername` (change yourusername to your actual username).
 
 After opening MobaXterm for the first time, install nano:
 ```
