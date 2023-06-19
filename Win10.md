@@ -4,7 +4,7 @@
 
 Install MobaXterm: see these text instructions which include a link to a video tutorial. [Install MobaXterm](https://hpc.ncsu.edu/Documents/mobaxterm.php?ref=login)
 
-Follow the instructions in the MobaXterm video to change the home directory to `C:\Users\yourusername` (change yourusername to your actual username).
+Follow the instructions or video to change the MobaXte perisistent home directory to `C:\Users\yourusername` (change yourusername to your actual username).
 
 After opening MobaXterm for the first time, install nano:
 ```
@@ -13,7 +13,7 @@ apt install nano -y
 
 ## Install VisIt
 
-These scripts were tested with VisIt 3.1.4.  Download [VisIt 3.1.4 for Windows](https://github.com/visit-dav/visit/releases/download/v3.1.4/visit3.1.4_x64.exe), install as administrator for single user.  
+These scripts were tested with VisIt 3.1.4.  Download [VisIt 3.1.4 for Windows](https://github.com/visit-dav/visit/releases/download/v3.1.4/visit3.1.4_x64.exe) and install.
 
 ## Clone this repo
 
