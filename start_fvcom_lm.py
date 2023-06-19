@@ -6,14 +6,15 @@
 # - Copy and paste everything between BEGIN COPY and END COPY
 # - Copy and paste commands one by one
 
+##----After modifying paths, BEGIN COPY---------------------
+
 ##--MODIFY-------------------
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
 FILE_NAME = "/Users/lllowe/MacbookProArchiveMay2022/ORD/CURRENT_TEST/output.0/mi_0006.nc"
-##--MODIFY
+##--End MODIFY
 
-##----BEGIN COPY---------------------
 #So it can find setup_visit.py
 import sys 
 sys.path.append(SCRIPT_PATH)
