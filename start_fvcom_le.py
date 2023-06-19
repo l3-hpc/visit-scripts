@@ -6,12 +6,15 @@
 # - Copy and paste everything between BEGIN COPY and END COPY
 # - Copy and paste commands one by one
 
+##----After modifying paths, BEGIN COPY---------------------
+
 ##--MODIFY-------------------
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
 FILE_NAME = "/Users/lllowe/LakeErie/DATA/leem_2days.nc"
-##----BEGIN COPY---------------------
+##----END MODIFY---------------------
+
 #So it can find setup_visit.py
 import sys 
 sys.path.append(SCRIPT_PATH)
