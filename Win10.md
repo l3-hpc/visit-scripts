@@ -74,4 +74,4 @@ whoami
 
 Make sure that you have set the MobaXterm 'home' directory properly.  If you did that, it will have git-cloned visit-scripts to your directory, and mi_0013.nc will be in the visit-scripts directory.  I am using a Windows VM from AWS, so my username is "Administrator".  (You should not run as administrator on your machine.). See below.
 
-[Windows directory](windowsdir.png)
+![](windowsdir.png)
