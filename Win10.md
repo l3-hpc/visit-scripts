@@ -1,10 +1,10 @@
-# Test on Windows VM
+# Test on AWS Windows VM
 
 ## Install MobaXterm
 
 Install MobaXterm: see these text instructions which include a link to a video tutorial. [Install MobaXterm](https://hpc.ncsu.edu/Documents/mobaxterm.php?ref=login)
 
-Follow the instructions in the MobaXterm video to change the home directory to `C:\Users\[your username here]`.
+Follow the instructions in the MobaXterm video to change the home directory to `C:\Users\yourusername` (change yourusername to your actual username).
 
 After opening MobaXterm for the first time, install nano:
 ```
@@ -73,4 +73,5 @@ whoami
 ```
 
 Make sure that you have set the MobaXterm 'home' directory properly.  If you did that, it will have git-cloned visit-scripts to your directory, and mi_0013.nc will be in the visit-scripts directory.  I am using a Windows VM from AWS, so my username is "Administrator".  (You should not run as administrator on your machine.). See below.
+
 [Windows directory](windowsdir.png)
