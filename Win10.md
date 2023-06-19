@@ -72,6 +72,10 @@ If you aren't sure what your username is, from MobaXterm, do
 whoami
 ```
 
-Make sure that you have set the MobaXterm 'home' directory properly.  If you did that, it will have git-cloned visit-scripts to your directory, and mi_0013.nc will be in the visit-scripts directory.  I am using a Windows VM from AWS, so my username is "Administrator".  (You should not run as administrator on your machine.). See below.
+Make sure that you have set the MobaXterm 'home' directory properly to `C:\Users\yourusername` by checking the Windows File folders. 
+
+If everything went according to plan, you will see the git-cloned visit-scripts in `C:\Users\yourusername` , and mi_0013.nc will be in the visit-scripts directory.  
+
+See below for what this should look like.  I am using a Windows VM from AWS, so my username is "Administrator".  (You should not run as administrator on your machine.). 
 
 ![](windowsdir.png)
