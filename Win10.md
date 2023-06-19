@@ -67,13 +67,13 @@ transect_against_3D(setvars)
 
 After confirming the above works, close VisIt, and try again using the instructions in the [README](README.md).
 
-Use the text editor nano to modify the start_ scripts, i.e.,
+Use the text editor nano to modify the start_ scripts, e.g.,
 ```
 cd
 cd visit-scripts
 nano start_fvcom_lm.py
 ```
-Then edit the following lines, substituting your username.
+Then edit the following lines, substituting your actual username for yourusername.
 ```
 SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
 FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
