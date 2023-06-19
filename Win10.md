@@ -65,6 +65,21 @@ create_pseudocolor_2Dtransect(setvars)
 transect_against_3D(setvars)
 ```
 
+After confirming the above works, close VisIt, and try again using the instructions in the [README](README.md).
+
+Use the text editor nano to modify the start_ scripts, i.e.,
+```
+cd
+cd visit-scripts
+nano start_fvcom_lm.py
+```
+Then edit the following lines, substituting your username.
+```
+SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
+FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
+```
+From nano, to save, do `Ctrl X`,`Y`,`Enter`.
+
 ## Troubleshooting
 
 If you aren't sure what your username is, from MobaXterm, do
