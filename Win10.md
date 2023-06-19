@@ -45,7 +45,7 @@ ls -lh mi_0013.nc
 
 For full instructions on using the 'start' scripts, see the [README](README.md).
 
-To test, for your convienience, just copy and paste these, after modifying yourusername.  This should open a 3D plot.
+To test, for your convienience, just copy and paste these, after modifying `yourusername`.  This should open a 3D plot.
 ```
 SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
 FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
@@ -73,7 +73,7 @@ cd
 cd visit-scripts
 nano start_fvcom_lm.py
 ```
-Then edit the following lines, substituting your actual username for yourusername.
+Then edit the following lines, substituting your actual username for `yourusername`.
 ```
 SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
 FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
