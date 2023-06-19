@@ -25,13 +25,13 @@ sample-movie-scripts directory
 ## Instructions for running
 
 ### Get the scripts
-From the terminal or Windows git bash, do
+From the terminal (macOS or Linux) or MobaXterm (Windows), do
 ```
 git clone https://github.com/l3-hpc/visit-scripts.git
 cd visit-scripts
 ```
 
-Or if you are avoiding the command line, click the green button at the top of the page of [this repo](https://github.com/l3-hpc/visit-scripts), click the green Code button and Download ZIP.  Find the zip file, called visit-scripts-main.zip, unzip, and click on the folder visit-scripts-main.
+Here are more detailed [Windows instructions](Win10.md).
 
 ### Modify the paths
 Before beginning, modify the start_XXX.py file for the location of these scripts and the data file.
