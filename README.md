@@ -70,7 +70,7 @@ A terminal should open with
 >>>
 ```
 
-Copy everything from "BEGIN COPY" to "END COPY".  Paste it in to the terminal.  There is no error checking yet.  (Sorry.)
+Copy everything from `##----After modifying paths, BEGIN COPY---------------------` to "END COPY".  Paste it in to the terminal.  There is no error checking yet.  (Sorry.)
 
 Choose one of the plots.  Start with
 ```
