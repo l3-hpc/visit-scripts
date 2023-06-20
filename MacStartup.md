@@ -46,7 +46,7 @@ The following commands are meant to be pasted in the VisIt CLI.  To get that, op
 A terminal (CLI command line) will pop up, looking something like (yours will probably be black):
 ![](VisItCLI.png)
 
-To test, for your convienience, just copy and paste these, after modifying `yourusername`.  (Check the PATH matches what you found above.)  This should open a 3D plot, similar to the first image on [LM](LM.md).
+To test, for your convienience, just copy and paste these, after modifying `yourusername`.  (Check the PATH matches what you found above.)  
 ```
 SCRIPT_PATH = "/Users/yourusername/visit-scripts"
 FILE_NAME = "/Users/yourusername/visit-scripts/mi_0013.nc"
@@ -59,7 +59,7 @@ open_file(setvars)
 create_pseudocolor_3Dplot(setvars)
 ```
 
-And then you can try:
+This should open a 3D plot, similar to the first image on [LM](LM.md).  Then you can try:
 ```
 create_pseudocolor_2Dslice(setvars)
 create_pseudocolor_2Dtransect(setvars)
@@ -68,7 +68,7 @@ transect_against_3D(setvars)
 
 After confirming the above works, close VisIt, and try again using the instructions in the [README](README.md).
 
-Use the text editor nano to modify the start_ scripts, e.g.,
+Use a text editor, like nano, to modify the start_ scripts, e.g.,
 ```
 cd
 cd visit-scripts
@@ -76,20 +76,8 @@ nano start_fvcom_lm.py
 ```
 Then edit the following lines, substituting your actual username for `yourusername`.
 ```
-SCRIPT_PATH = "C:\\Users\\yourusername\\visit-scripts\\"
-FILE_NAME = "C:\\Users\\yourusername\\visit-scripts\\mi_0013.nc"
+SCRIPT_PATH = "/Users/yourusername/visit-scripts"
+FILE_NAME = "/Users/yourusername/visit-scripts/mi_0013.nc"
 ```
 From nano, to save, do `Ctrl X`,`Y`,`Enter`.
 
-## Troubleshooting
-
-If you aren't sure what your username is, from MobaXterm, do
-```
-whoami
-```
-
-Make sure that you have set the MobaXterm 'home' directory properly to `C:\Users\yourusername` by checking the Windows File folders. 
-
-If everything went according to plan, you will see the git-cloned visit-scripts in `C:\Users\yourusername` , and mi_0013.nc will be in the visit-scripts directory.  
-
-See below for what this should look like, sorted by Size.  I am using a Windows VM from AWS, so my username is "Administrator".  (You should not run as administrator on your machine.). 
