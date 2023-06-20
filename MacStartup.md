@@ -112,8 +112,9 @@ setvars["clim"] = 0
 create_pseudocolor_3Dplot(setvars)
 ```
 
-Now, pick the limits by doing, in the VisIt CLI terminal:
+Now, change it back to turbo, and pick the limits by doing, in the VisIt CLI terminal:
 ```
+setvars["cmap"] = "turbo"
 setvars["clim"] = 1
 setvars["cmin"] = 0
 setvars["cmax"] = 7
