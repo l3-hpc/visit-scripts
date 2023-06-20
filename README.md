@@ -5,7 +5,7 @@ There are 2 different things you can use the github scripts for:
 1. Setting up the environment with a *start_* script so you can start off with good plot without having to click a bunch of stuff in the GUI
 2. Creating images in batch mode for different types of plots for each variable (actually, SIT, RPOP, PO4T for now) at every single time step and making a movie from the images
 
-Don't have data?  Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or Mac[MacStartup.md).
+Don't have data?  Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).
 
 ## Contents
 
