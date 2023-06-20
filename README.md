@@ -2,8 +2,7 @@
 VisIt scripts developed for FVCOM and SCHISM
 
 There are 2 different things you can use the github scripts for:
-1. Setting up the environment with a *start_* script so you can start off with good plot without having to click a bunch of stuff in the GUI
-  - Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).
+1. Setting up the environment with a *start_* script so you can start off with good plot without having to click a bunch of stuff in the GUI.  Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).
 2. Creating images in batch mode for different types of plots for each variable (actually, SIT, RPOP, PO4T for now) at every single time step and making a movie from the images.  That can get very specific, and this github mostly holds 'my' stuff, usually in-progress.  The only thing tested and documented for use by others is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
 
 
