@@ -81,3 +81,44 @@ FILE_NAME = "/Users/yourusername/visit-scripts/mi_0013.nc"
 ```
 From nano, to save, do `Ctrl X`,`Y`,`Enter`.
 
+## Changing the plot parameters
+
+The point of the startup scripts are to minimize your startup time.  You should modify the startup script according to your case.  To do that, modify `setvars`.
+
+The file `setup_visit.py` contains plot 'macros' that make a plot according to setvars parameters.  Read the comment lines for definitions.  To illustrate, try the following:
+
+Follow the steps above until
+```
+create_pseudocolor_3Dplot(setvars)
+```
+
+Now you should have a 3D plot.  Rotate it around and look at it.  Click through the timesteps.
+
+The colormap is 'turbo'.  Change the colormap to viridis by doing, in the VisIt CLI terminal:
+```
+setvars["cmap"] = "viridis"
+create_pseudocolor_3Dplot(setvars)
+```
+
+The variable is total phosphorus (TP).  Change the variable to temperature (temp) by doing, in the VisIt CLI terminal:
+```
+setvars["var"] = "temp"
+create_pseudocolor_3Dplot(setvars)
+```
+
+The colormap is defined as the min/max of data at each timestep or by specifying a min and max.  The plot looks bad because it is using min/max appropriate for TP.  Let VisIt pick the min/max according to data by doing, in the VisIt CLI terminal:
+```
+setvars["clim"] = 0
+create_pseudocolor_3Dplot(setvars)
+```
+
+Now, pick the limits by doing, in the VisIt CLI terminal:
+```
+setvars["clim"] = 1
+setvars["cmin"] = 0
+setvars["cmax"] = 7
+create_pseudocolor_3Dplot(setvars)
+```
+
+
+
