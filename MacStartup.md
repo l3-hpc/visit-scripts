@@ -85,7 +85,7 @@ From nano, to save, do `Ctrl X`,`Y`,`Enter`.
 
 The point of the startup scripts are to minimize your startup time.  You should modify the startup script according to your case.  To do that, modify `setvars`.
 
-The file `setup_visit.py` contains plot 'macros' that make a plot according to setvars parameters.  Read the comment lines for definitions.  To illustrate, try the following:
+The file *setup_visit.py* contains plot 'macros' that make a plot according to setvars parameters.  Read the comment lines in *startup_fvcom_lm.py* for definitions.  To illustrate, try the following:
 
 Follow the steps above until
 ```
