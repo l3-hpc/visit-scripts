@@ -65,12 +65,10 @@ Open VisIt.
 Launch the command line interface.  In the top VisIt nav bar:
 - Controls:Launch CLI
 
-A terminal should open with
-```
->>>
-```
+A terminal (CLI command line) will pop up, looking something like (yours will probably be black):
+![](VisItCLI.png)
 
-Copy everything from `##----After modifying paths, BEGIN COPY---------------------` to `##---END COPY----------------##`.  Paste it in to the terminal.  There is no error checking yet.  (Sorry.)
+Copy everything from `##----After modifying paths, BEGIN COPY---------------------` to `##---END COPY----------------##`.  Paste it in to the terminal at the prompt `>>>`.
 
 Also, copy/paste to VisIt CLI doesn't work when using a VM.  Maybe you can fix the settings to make it work.  (If you do, let me know how.). Otherwise, you'll have to type.  It is not actually that much to type, if you ignore the comments.  See [Windows Instructions](Win10.md), **Run example script for LM**, to see the commands without comment lines and extra whitespace.
 
