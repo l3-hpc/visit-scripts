@@ -6,7 +6,7 @@ These scripts were tested with VisIt 3.1.4.  Download [VisIt 3.1.4 for Mac](http
 
 ## Clone this repo
 
-From Terminal, do:
+From Terminal, cd to your home directory and clone the repo.
 ```
 cd
 git clone https://github.com/l3-hpc/visit-scripts.git
@@ -22,11 +22,6 @@ ls
 
 From Terminal, do:
 ```
-wget https://renc.osn.xsede.org/ees210015-bucket01/testvisit/mi_0013.nc
-```
-
-If your Mac doesn't have `wget`, then do:
-```
 curl https://renc.osn.xsede.org/ees210015-bucket01/testvisit/mi_0013.nc -o mi_0013.nc
 ```
 
@@ -37,7 +32,7 @@ ls -lh mi_0013.nc
 
 ## Run example script for LM
 
-For full instructions on using the 'start' scripts, see the [README](README.md), but to test, use the commands below.  
+For full instructions on using the 'start' scripts, see the [README](README.md), but to test, use the commands in the box below.  
 
 Make sure you are in the correct directory, and check your path by doing:
 ```
