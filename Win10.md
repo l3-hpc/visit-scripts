@@ -43,7 +43,11 @@ ls -lh mi_0013.nc
 
 ## Run example script for LM
 
-For full instructions on using the 'start' scripts, see the [README](README.md).
+For full instructions on using the 'start' scripts, see the [README](README.md), but to test, use the commands below.  The following commands are meant to be pasted in the VisIt CLI.  To get that, open VisIt and launch the command line interface by doing the following:
+- In the top VisIt nav bar, click Controls:Launch CLI
+
+A terminal (CLI command line) will pop up, looking something like (yours will probably be black):
+![](VisItCLI.png)
 
 To test, for your convienience, just copy and paste these, after modifying `yourusername`.  This should open a 3D plot.
 ```
