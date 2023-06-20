@@ -12,7 +12,7 @@
 ##--Set path to scripts----
 SCRIPT_PATH = "/Users/lllowe/visit-scripts"
 #Put the full path to the file
-FILE_NAME = "/Users/lllowe/MacbookProArchiveMay2022/ORD/CURRENT_TEST/output.0/mi_0006.nc"
+FILE_NAME = "/Users/lllowe/visit-scripts/mi_0013.nc"
 ##--End MODIFY
 
 #So it can find setup_visit.py
