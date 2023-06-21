@@ -2,7 +2,7 @@
 
 To install ffmpeg on Windows, using an AWS EC2 instance (VM) with Windows Server, I did the following:
 
-**Install miniconda**
+## Install miniconda
 
 (BTW I also used miniconda to install ffmpeg on both Linux and Mac.)
 
@@ -13,7 +13,7 @@ During installation, choose:
 - Just Me
 - All defaults
 
-**Install ffmpeg and set paths**
+## Install ffmpeg and set paths
 
 From Windows start menu, open Anaconda Prompt.  Use conda to install ffmpeg:
 ```
@@ -30,7 +30,7 @@ where ffmpeg
 To add python and conda to the system path, (so you can type it in MobaXterm), follow [this YouTube video](https://www.youtube.com/watch?v=Xa6m1hJHba0). Repeat the steps to add the path to ffmpeg, which should be something like
 `C:\Users\yourusername\miniconda3\Library\bin`
 
-**Run ffmpeg**
+## Run ffmpeg
 
 Open MobaXterm.  If you had it open before doing the above, exit and reopen to refresh the Path.
 
