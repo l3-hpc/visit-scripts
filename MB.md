@@ -18,9 +18,6 @@ create_pseudocolor_2Dslice(setvars)
 ```
 ![](imgs/2D20MB.png)
 
-## create_pseudocolor_2Dtransect(setvars)
-2D transect between two chosen points
-
 ![](imgs/transectMB.png)
 ## transect_against_3D(setvars)
 2D transect shown within the 3D grid
