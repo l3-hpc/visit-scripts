@@ -10,7 +10,7 @@ See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO5
 
 ## Start scripts
 
-The main purpose of a start script is to set up the environment so you can launch your favorite plot without having to click a bunch of stuff in the GUI.  See the 3D mesh with transect plot for an example of something you'd rather not do with the GUI twice.
+The main purpose of a start script is to set up the environment so you can launch your favorite plot without having to click a bunch of stuff in the GUI.  See a [3D mesh and transect](imgs/rotateLM.png) for an example of something you'd rather not do in the GUI twice.
 
 A start script
 - adds the path (SCRIPT_PATH) of setup_visit.py, the script equivalent of setting a PYTHONHOME environment
