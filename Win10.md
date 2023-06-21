@@ -1,4 +1,4 @@
-# Test start_ scripts on AWS Windows VM
+# Test start_ scripts on Windows
 
 ## Install MobaXterm
 
