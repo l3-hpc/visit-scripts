@@ -19,12 +19,16 @@ After understanding what setvars does, copy a start script to a different file a
 Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
 
 **Batch scripts**
-Batch scripts basically call the plot functions several types over a loop that redefines setvars items.  Before trying the scripts, do the above start script demo to understand the use of setvars.  There are different Python libraries to do this; setup_visit is mainly used for interactive start scripts while l3 and l3v are used for batch.  The timeslider in setup_visit has unintended consequences if used in batch mode.  These libraries are continually evolving.
 
-Creating images in batch mode for different types of plots for each variable at every single time step and making a movie from the images.  That can get very specific, and this github mostly holds 'my' stuff, usually in-progress.  The only thing tested and documented for use by others is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
+Batch scripts basically call the plot functions several types over a loop that redefines setvars items.  Before trying the scripts, do the above start script demo to understand the use of setvars.  There are different Python libraries to do this; setup_visit is mainly used for interactive start scripts while l3 and l3v are used for batch.  The timeslider in setup_visit has unintended consequences if used in batch mode.  These libraries are continuously evolving.
 
+Batch scripts can get very specific to the use case, and this github mostly holds 'my' stuff, usually in-progress and again, continuously evolving.  The only thing tested and documented for use *by others* is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD).  If you are on one of my projects, you are welcome to request a modified, frozen, and documented batch script for a specific purpose.
 
+also...
 
+**ffmpeg**
+
+There are scripts for using ffmpeg after creating a set of images in batch.  The scripts loop over batch script parameters to define frame numbers and file paths, create a string that is an ffmpeg command, then does a system call with that command string.  They work on Hazel at NCSU without modification where ffmpeg is installed via a conda environment.  To run them in different environments, you may need to remove some of the arguments.  You can remove almost all of the optional arguments and still get a movie.  You don't need to run a script to make a movie.
 
 ## Contents
 
