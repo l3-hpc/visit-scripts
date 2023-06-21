@@ -130,3 +130,6 @@ For **not** SCHISM or FVCOM
 
 
 **These instructions have only been tested on my Mac Studio with M1 chip for the 'start_' files provided.**
+
+## About VisIT
+VisIt is an Open Source, interactive, scalable, visualization, animation and analysis tool.  See https://visit-dav.github.io
