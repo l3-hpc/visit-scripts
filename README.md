@@ -28,7 +28,15 @@ also...
 
 **ffmpeg**
 
-There are scripts for using ffmpeg after creating a set of images in batch.  The scripts loop over batch script parameters to define frame numbers and file paths, create a string that is an ffmpeg command, then does a system call with that command string.  They work on Hazel at NCSU without modification where ffmpeg is installed via a conda environment.  To run them in different environments, you may need to remove some of the arguments.  You can remove almost all of the optional arguments and still get a movie.  You don't need to run a script to make a movie.
+There are scripts for using ffmpeg after creating a set of images in batch.  The scripts loop over batch script parameters to define frame numbers and file paths, create a string that is an ffmpeg command, then does a system call with that command string.  They work on Hazel at NCSU without modification where ffmpeg is installed via a conda environment.  To run them in different environments, you may need to remove some of the arguments.  You can remove almost all of the optional arguments and still get a movie.  
+
+You don't need to run a script to make a movie.  For example, if you have a directory ~/images filled with images with naming convention movieXXXX.png, with XXXX in logical numerical order, to make an mp4 movie named movie.mp4, you can do
+```
+cd ~/images
+ffmpeg -framerate 15 -i movie%04d.png movie.mp4
+```
+
+See [Winffmpeg](Winffmpeg.md) for advice on installing ffmpeg on Windows.
 
 ## Contents
 
