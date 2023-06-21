@@ -1,5 +1,5 @@
 # visit-scripts
-VisIt scripts originally developed for FVCOM and SCHISM.  See [Vist Tutorial Playlist](Win10.md) 
+VisIt scripts originally developed for FVCOM and SCHISM.  See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO52Mxk1xKWVKBXe2m9mwojSE) for demos on using VisIt interactively (GUI).
 
 There are three main types of scripts in the repo: start scripts, batch scripts, and movie (ffmpeg) scripts.
 
