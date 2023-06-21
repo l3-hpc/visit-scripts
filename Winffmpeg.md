@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=Xa6m1hJHba0. Similarly, add the path to ffmpeg, 
 
 **Run ffmpeg**
 
-Open MobaXterm.  If you had it open before doing the above, exit and reopen.
+Open MobaXterm.  If you had it open before doing the above, exit and reopen to refresh the Path.
 
 In MobaXterm, check that you have ffmpeg by doing
 ```
