@@ -14,6 +14,7 @@ A start script:
 - imports setup_visit, my Python library defining functions and macros for creating plots based on a Python dictionary setvars, which defines the most often changed parameters, e.g., file, variable, colormap, scale, etc.
 - defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset
 - lists the available plot commands with an example of changing a single parameter in setvars.
+
 After understanding what setvars does, copy a start script to a different file and modify for your dataset.
 
 Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
