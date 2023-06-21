@@ -1,4 +1,4 @@
-# Test start_ scripts on Windows
+# Startup script demo for Windows
 
 ## Install MobaXterm
 
