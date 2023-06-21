@@ -23,7 +23,7 @@ A start script
 Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
 
 Start scripts with good default parameters are available for the following:
-- start_fvcom_lm.py: FVCOM Lake Michigan Data. Expected outputs are shown in [LM](LM.md). 
+- start_fvcom_lm.py: FVCOM Lake Michigan **TP model** Data. Expected outputs are shown in [LM](LM.md). 
 - start_fvcom_le.py: FVCOM Lake Erie **TP model** data
 - start_schism_mb.py: SCHISM Mobile Bay Data. Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
