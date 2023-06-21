@@ -12,13 +12,13 @@ See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO5
 
 The main purpose of a start script is to set up the environment so you can launch your favorite plot without having to click a bunch of stuff in the GUI.
 
-A start script:
+A start script
 - adds the path (SCRIPT_PATH) of setup_visit.py, the script equivalent of setting a PYTHONHOME environment
 - adds the path to the netCDF dataset (FILE_NAME)
 - imports visit, a Python library for VisIt commands
 - imports setup_visit, my Python library defining functions and macros for creating plots based on a Python dictionary setvars, which defines the most often changed parameters, e.g., file, variable, colormap, scale, etc.
-- defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset
-- lists the available plot commands with an example of changing a single parameter in setvars.
+- defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset.
+- lists the available plot commands with an example of changing a single parameter in setvars
 
 Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
 
