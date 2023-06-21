@@ -1,4 +1,4 @@
-# Test Lake Michigan startup script
+# Startup script demo for Mac
 
 ## Install VisIt
 
