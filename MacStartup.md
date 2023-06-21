@@ -40,7 +40,7 @@ cd ~/visit-scripts
 pwd
 ```
 
-The following commands are meant to be pasted in the VisIt CLI.  To get that, open VisIt and launch the command line interface by doing the following:
+The following commands are meant to be pasted in the VisIt CLI.  To open the VisIt CLI, open VisIt and launch the command line interface by doing the following:
 - In the top VisIt nav bar, click Controls:Launch CLI
 
 A terminal (CLI command line) will pop up, looking something like (yours will probably be black):
