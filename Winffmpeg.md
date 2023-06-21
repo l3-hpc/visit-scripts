@@ -27,7 +27,7 @@ where conda
 where ffmpeg
 ```
 
-To add python and conda to the system path, (so you can type it in MobaXterm), follow [this YouTube video](https://www.youtube.com/watch?v=Xa6m1hJHba0). Repeat the steps to add the path to ffmpeg, which should be something like
+To add python and conda to the system path, (so you can type it in MobaXterm), follow this YouTube video: [Adding Python and Conda in System Path ( in windows)](https://www.youtube.com/watch?v=Xa6m1hJHba0). Repeat the steps shown in the video to add the path to ffmpeg, which should be something like
 `C:\Users\yourusername\miniconda3\Library\bin`
 
 ## Run ffmpeg
