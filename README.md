@@ -40,7 +40,7 @@ Batch scripts basically call the plot functions several times over a loop that r
 Batch scripts can get very specific to the use case, and this github mostly holds 'my' stuff, usually in-progress and again, continuously evolving.  The only thing tested and documented for use *by others* is [Instructions for running VisIt in batch mode to create images and movies for LEEM](sample-movie-scripts/README_LE.MD).  If you are on one of my projects, you are welcome to request a modified, frozen, and documented batch script for a specific purpose.
 
 
-## movie scripts (ffmpeg)
+## Movie scripts (ffmpeg)
 
 There are scripts for using ffmpeg after creating a set of images in batch.  A script loops over batch script parameters to define frame numbers and file paths, creates a string that is an ffmpeg command, then does a system call with that command string.  The scripts work on Hazel at NCSU without modification where ffmpeg is installed via a conda environment.  To run them in different environments, you may need to remove some of the arguments.  You can remove almost all of the optional arguments and still get a movie.  
 
