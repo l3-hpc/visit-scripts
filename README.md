@@ -37,7 +37,7 @@ After understanding what setvars does, copy a start script to a different file a
 
 Batch scripts basically call the plot functions several times over a loop that redefines individual setvars items.  Before trying the batch scripts, do the above start script demo to understand the use of setvars.  There are different Python libraries to do this; setup_visit is mainly used for interactive start scripts while l3 and l3v are used for batch.  The timeslider in setup_visit has unintended consequences if used in batch mode.  These libraries are continuously evolving.
 
-Batch scripts can get very specific to the use case, and this github mostly holds 'my' stuff, usually in-progress and again, continuously evolving.  The only thing tested and documented for use *by others* is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD).  If you are on one of my projects, you are welcome to request a modified, frozen, and documented batch script for a specific purpose.
+Batch scripts can get very specific to the use case, and this github mostly holds 'my' stuff, usually in-progress and again, continuously evolving.  The only thing tested and documented for use *by others* is [Instructions for running VisIt in batch mode to create images and movies for LEEM](sample-movie-scripts/README_LE.MD).  If you are on one of my projects, you are welcome to request a modified, frozen, and documented batch script for a specific purpose.
 
 
 ## movie scripts (ffmpeg)
