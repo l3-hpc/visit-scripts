@@ -1,9 +1,9 @@
 # visit-scripts
-VisIt scripts developed for FVCOM and SCHISM
+VisIt scripts originally developed for FVCOM and SCHISM.  See [Vist Tutorial Playlist](Win10.md) 
 
-There are two types of scripts in the repo: start scripts and batch scripts.
+There are three main types of scripts in the repo: start scripts, batch scripts, and movie (ffmpeg) scripts.
 
-**Start scripts**
+## Start scripts
 
 The main purpose of a start script is to set up the environment so you can launch your favorite plot without having to click a bunch of stuff in the GUI.
 
@@ -15,19 +15,27 @@ A start script:
 - defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset
 - lists the available plot commands with an example of changing a single parameter in setvars.
 
-After understanding what setvars does, copy a start script to a different file and modify for your dataset.
-
 Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
 
-**Batch scripts**
+Start scripts with good default parameters are available for the following:
+- start_fvcom_lm.py: FVCOM Lake Michigan Data. Expected outputs are shown in [LM](LM.md). 
+- start_fvcom_le.py: FVCOM Lake Erie **TP model** data
+- start_schism_mb.py: SCHISM Mobile Bay Data. Expected outputs are shown in [MB](MB.md). 
+- start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
+- start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
+
+After understanding what setvars does, copy a start script to a different file and modify for your dataset.
+
+*Have a different dataset?  Scroll to the bottom for a Note.*
+
+## Batch scripts
 
 Batch scripts basically call the plot functions several types over a loop that redefines setvars items.  Before trying the scripts, do the above start script demo to understand the use of setvars.  There are different Python libraries to do this; setup_visit is mainly used for interactive start scripts while l3 and l3v are used for batch.  The timeslider in setup_visit has unintended consequences if used in batch mode.  These libraries are continuously evolving.
 
 Batch scripts can get very specific to the use case, and this github mostly holds 'my' stuff, usually in-progress and again, continuously evolving.  The only thing tested and documented for use *by others* is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD).  If you are on one of my projects, you are welcome to request a modified, frozen, and documented batch script for a specific purpose.
 
-also...
 
-**ffmpeg**
+## movie scripts (ffmpeg)
 
 There are scripts for using ffmpeg after creating a set of images in batch.  The scripts loop over batch script parameters to define frame numbers and file paths, create a string that is an ffmpeg command, then does a system call with that command string.  They work on Hazel at NCSU without modification where ffmpeg is installed via a conda environment.  To run them in different environments, you may need to remove some of the arguments.  You can remove almost all of the optional arguments and still get a movie.  
 
@@ -39,30 +47,8 @@ ffmpeg -framerate 15 -i movie%04d.png movie.mp4
 
 See [Winffmpeg](Winffmpeg.md) for advice on installing ffmpeg on Windows.
 
-## Contents
 
-Scripts that define macros:
-- setup_visit.py
-
-Commands to cut and paste, starts with good default parameters for the file:
-- start_fvcom_lm.py: FVCOM Lake Michigan Data.  Expected outputs are shown in [LM](LM.md). 
-- start_fvcom_le.py: FVCOM Lake Erie Data.
-- start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
-- start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
-- start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
-  
-*Have a different dataset?  Scroll to the bottom for a Note.*
-
-notes directory
-- dates_reference has starting days of months
-- ffmpeg.txt has ffmpeg command
-- vars_reference.txt: how to define comparison variables, e.g., TP as a function of other variables
-
-sample-movie-scripts directory
-- [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
-- Other scripts are likely specific to my own files and without documentation on modifying them.
-
-## Instructions for running
+## Instructions for running a start script
 
 ### Get the scripts
 From the terminal (macOS or Linux) or MobaXterm (Windows), do
