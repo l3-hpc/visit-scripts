@@ -1,9 +1,29 @@
 # visit-scripts
 VisIt scripts developed for FVCOM and SCHISM
 
-There are 2 different things you can use the github scripts for:
-1. Setting up the environment with a *start_* script so you can start off with good plot without having to click a bunch of stuff in the GUI.  Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).
-2. Creating images in batch mode for different types of plots for each variable at every single time step and making a movie from the images.  That can get very specific, and this github mostly holds 'my' stuff, usually in-progress.  The only thing tested and documented for use by others is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
+There are two types of scripts in the repo: start scripts and batch scripts.
+
+**Start scripts**
+
+The main purpose of a start script is to set up the environment so you can launch your favorite plot without having to click a bunch of stuff in the GUI.
+
+A start script:
+- adds the path (SCRIPT_PATH) of setup_visit.py, the script equivalent of setting a PYTHONHOME environment
+- adds the path to the netCDF dataset (FILE_NAME)
+- imports visit, a Python library for VisIt commands
+- imports setup_visit, my Python library defining functions and macros for creating plots based on a Python dictionary setvars, which defines the most often changed parameters, e.g., file, variable, colormap, scale, etc.
+- defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset
+- lists the available plot commands with an example of changing a single parameter in setvars.
+After understanding what setvars does, copy a start script to a different file and modify for your dataset.
+
+Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
+
+**Batch scripts**
+Batch scripts basically call the plot functions several types over a loop that redefines setvars items.  Before trying the scripts, do the above start script demo to understand the use of setvars.  There are different Python libraries to do this; setup_visit is mainly used for interactive start scripts while l3 and l3v are used for batch.  The timeslider in setup_visit has unintended consequences if used in batch mode.  These libraries are continually evolving.
+
+Creating images in batch mode for different types of plots for each variable at every single time step and making a movie from the images.  That can get very specific, and this github mostly holds 'my' stuff, usually in-progress.  The only thing tested and documented for use by others is [Instructions for running VisIt in batch mode to create images and movies for LEEM.](sample-movie-scripts/README_LE.MD)
+
+
 
 
 ## Contents
@@ -17,6 +37,7 @@ Commands to cut and paste, starts with good default parameters for the file:
 - start_schism_mb.py: SCHISM Mobile Bay Data  Expected outputs are shown in [MB](MB.md). 
 - start_schism_toy.py: SCHISM toy grid (from ECO-TOY)
 - start_efdc_slre.py: EFDC-CGEM for St. Louis River Estuary
+  
 *Have a different dataset?  Scroll to the bottom for a Note.*
 
 notes directory
