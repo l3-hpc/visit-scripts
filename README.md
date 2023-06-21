@@ -98,7 +98,7 @@ Launch the command line interface.  In the top VisIt nav bar:
 A terminal (CLI command line) will pop up, looking something like (yours will probably be black):
 ![](VisItCLI.png)
 
-From the start_ file, copy everything from `##----After modifying paths, BEGIN COPY---------------------` to `##---END COPY----------------##`.  Paste it in to the terminal at the prompt `>>>`.
+From the start_ file, copy everything from `##----After modifying paths, BEGIN COPY---------------------` to `##---END COPY----------------##`.  Paste it into the terminal at the prompt `>>>`.
 
 Choose one of the plots.  Start with
 ```
