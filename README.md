@@ -1,5 +1,7 @@
 # visit-scripts
-VisIt scripts originally developed for FVCOM and SCHISM.  See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO52Mxk1xKWVKBXe2m9mwojSE) for demos on using VisIt interactively (GUI).
+This repo is for sharing and version control of VisIt scripts, most of which were originally developed for FVCOM and SCHISM.
+
+See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO52Mxk1xKWVKBXe2m9mwojSE) for demos on using VisIt interactively (GUI).  Despite the names, the steps in the videos work for many datasets, not just FVCOM or SCHISM.
 
 There are three main types of scripts in the repo: start scripts, batch scripts, and movie (ffmpeg) scripts.
 
