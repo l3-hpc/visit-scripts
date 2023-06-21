@@ -135,3 +135,14 @@ For **not** SCHISM or FVCOM
 
 ## About VisIT
 VisIt is an Open Source, interactive, scalable, visualization, animation and analysis tool.  See https://visit-dav.github.io/visit-website/index.html
+
+# Thank you!
+*This work is funded by the National Oceanic and Atmospheric Administration's RESTORE Science Program under award NA19NOS4510194 and by contract to NCSU from EPA at ORD: Center for Computational Toxicology & Exposure (CCTE), Great Lakes Toxicology & Ecology Division. (Note: Contributed content is not reviewed or officially endorsed by either NOAA or EPA.)
+
+----
+
+DISCLAIMER:
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
+
+
