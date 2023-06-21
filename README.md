@@ -115,7 +115,7 @@ Note: copy/paste to VisIt CLI doesn't work when using a VM.  Maybe you can fix t
 
 ## Different dataset?
 
-First: **The data must be 3D.**  
+First: **The data must be a 3D netCDF file that either uses standard conventions(CF) or has a custom VisIt reader plugin.**  
 
 For SCHISM and FVCOM:
 - Start by making a copy of a start_fvcom or start_schism file, rename it.
