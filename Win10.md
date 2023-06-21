@@ -124,6 +124,8 @@ setvars["cmax"] = 7
 create_pseudocolor_3Dplot(setvars)
 ```
 
+See this video, which shows a demo of what it looks like when you follow the above steps.  [VisIt Setup Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
+
 ## Troubleshooting
 
 If you aren't sure what your username is, from MobaXterm, do
