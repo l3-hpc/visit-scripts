@@ -9,7 +9,7 @@ See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO5
 - movie (ffmpeg) scripts
 
 A Warning:
-- The main purpose of VisIt scripts is to make images from large quantities of data residing on HPC systems.  Currently, we are running on Expanse, at SDSC, and they are using VisIt 3.1.4.  To use client-server mode, *my* VisIt has to match *their* VisIt.  If you find lines that don't work for newer versions of VisIt, please let me know and I can do an update, BUT...if a modification for a newer version breaks 3.1.4, I will not update it at this time.  But please fork this repo and make all the changes you want!  We'll see you later, especially when they install a new VisIt on Expanse.
+- The main purpose of VisIt scripts is to make images from large quantities of data residing on HPC systems.  Currently, we are running on Expanse, at SDSC, and they are using VisIt 3.1.4.  To use client-server mode, *my* VisIt has to match *their* VisIt.  If you find lines that don't work for newer versions of VisIt, please let me know and I can do an update, BUT...if a modification for a newer version breaks 3.1.4, I will not update it at this time.  Please fork this repo and make all the changes you want!  We'll see you later, especially when they install a new VisIt on Expanse.
 
 ## Start scripts
 
