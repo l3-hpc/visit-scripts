@@ -138,7 +138,7 @@ For SCHISM and FVCOM:
 - You'll want to change the default parameters.  
 -   Start by making a copy of a start_fvcom or start_schism file, rename it. 
 -   It is mandatory that you set `var` to data that is actually in your dataset.  
--   Then, as a starting point, I recommend setting `clim` = 1, and `scale` = 1.
+-   Then, as a starting point, I recommend setting `clim` = 0, and `scale` = 1.
 
 For **not** SCHISM or FVCOM
 - create_pseudocolor_3Dplot will probably work, and probably create_psudocolor_2Dslice.
