@@ -78,7 +78,7 @@ git clone https://github.com/l3-hpc/visit-scripts.git
 cd visit-scripts
 ```
 
-Here are more detailed [Windows instructions](Win10.md).
+Here are more detailed instuctions for running on [Windows](Win10.md) or [Mac](MacStartup.md).
 
 ### Modify the paths
 Before beginning, modify the start_XXX.py file for the location of these scripts and the data file.
