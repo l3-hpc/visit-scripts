@@ -2,9 +2,9 @@
 This repo is for sharing and version control of VisIt scripts, most of which were originally developed for FVCOM and SCHISM.
 
 ## Use the GUI first
-See the [VisIt Tutorial Playlist](https://youtube.com/playlist?list=PLzDPdMiOzO52Mxk1xKWVKBXe2m9mwojSE) for demos on using VisIt interactively (GUI).  Despite the names, the steps in the videos work for many datasets, not just FVCOM or SCHISM.  
+See the [VisIt Tutorial Playlist](https://www.youtube.com/playlist?list=PL_3eGyhpHUkhGvnVAPYYlaL3_-z6u3NCV) for demos on using VisIt interactively (GUI).  Despite the names, the steps in the videos work for many datasets, not just FVCOM or SCHISM.  
 
-VisIt can usually generate a nice pseduocolor plot with just about any dataset.  If you open the dataset and see a bunch of weird and crazy garbage, check the [VisIt for SCHISM](https://youtu.be/mvCu8vCbTLs) video, which uses a threshold operator to remove garbage.  (Usually, the 'garbage' is not really garbage, just missing or NAN cells due to land masks or wetting and drying.)
+VisIt can usually generate a nice pseduocolor plot with just about any dataset.  If you open the dataset and see a bunch of weird and crazy garbage, check the [VisIt for SCHISM](https://youtu.be/p0Z2Fw5sdKY) video, which uses a threshold operator to remove garbage.  (Usually, the 'garbage' is not really garbage, just missing or NAN cells due to land masks or wetting and drying.)
 
 The main purpose of VisIt scripts is to make thousands of images from large quantities of data residing on HPC systems.  If you aren't doing that, and these scripts don't work for you, how about just using the GUI?  :-)
 
