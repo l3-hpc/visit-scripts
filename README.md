@@ -34,7 +34,7 @@ A start script
 - defines default values for setvars.  These default parameters should get you a decent plot for the intended dataset.
 - lists the available plot commands with an example of changing a single parameter in setvars
 
-Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://m.youtube.com/watch?v=b68PV_xDbxI).
+Try *start_fvcom_lm.py* using instructions for [Windows](Win10.md) or [Mac](MacStartup.md).  While going through the steps, to clarify where to copy, paste, and click, see the video [VisIt Start Scripts](https://youtu.be/XMC_rvxZC5A).
 
 Start scripts with good default parameters are available for the following:
 - start_fvcom_lm.py: FVCOM Lake Michigan **TP model** data. Expected outputs are shown in [LM](LM.md). 
